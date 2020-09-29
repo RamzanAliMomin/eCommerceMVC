@@ -1,0 +1,61 @@
+﻿@model IEnumerable<DomainModels.Entities.Company>;
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+<p>
+    @Html.ActionLink("Create", "Create");
+</p>
+
+
+<div class="table table-responsive ">
+    <table class="table table-striped table-bordered">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.CompanyName)</th>
+            <th>@Html.DisplayNameFor(model => model.DirectorName)</th>
+            <th>@Html.DisplayNameFor(model => model.MobileNumber)</th>
+            <th>@Html.DisplayNameFor(model => model.Address)</th>
+            <th>@Html.DisplayNameFor(model => model.CompanyLicenceDate)</th>
+            <th>@Html.DisplayNameFor(model => model.CompanyRegisterDate)</th>
+            <th>@Html.DisplayNameFor(model => model.CompanyStartDate)</th>
+            <th>@Html.DisplayNameFor(model => model.EmailAddress)</th>
+            <th>@Html.DisplayNameFor(model => model.GrnNo)</th>
+            <th>@Html.DisplayNameFor(model => model.Level)</th>
+            <th>@Html.DisplayNameFor(model => model.PinCode)</th>
+            <th>@Html.DisplayNameFor(model => model.TownName)</th>
+            <th>@Html.DisplayNameFor(model => model.TypeOfCompany)</th>
+            <th>@Html.DisplayNameFor(model => model.Country)</th>
+            <th>@Html.DisplayNameFor(model => model.State)</th>
+            <th>@Html.DisplayNameFor(model => model.City)</th>
+            <th>Delete</th>
+            <th>Edit</th>
+
+        </tr>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@Html.DisplayFor(md => item.CompanyName)</td>
+            <td>@Html.DisplayFor(md => item.DirectorName)</td>
+            <td>@Html.DisplayFor(md => item.MobileNumber)</td>
+            <td>@Html.DisplayFor(md => item.Address)</td>
+            <td>@Html.DisplayFor(md => item.CompanyLicenceDate)</td>
+            <td>@Html.DisplayFor(md => item.CompanyRegisterDate)</td>
+            <td>@Html.DisplayFor(md => item.CompanyStartDate)</td>
+            <td>@Html.DisplayFor(md => item.EmailAddress)</td>
+            <td>@Html.DisplayFor(md => item.GrnNo)</td>
+            <td>@Html.DisplayFor(md => item.Level)</td>
+            <td>@Html.DisplayFor(md => item.PinCode)</td>
+            <td>@Html.DisplayFor(md => item.TownName)</td>
+            <td>@Html.DisplayFor(md => item.TypeOfCompany)</td>
+            <td>@Html.DisplayFor(md => item.Country.CountryName)</td>
+            <td>@Html.DisplayFor(md => item.State.StateName)</td>
+            <td>@Html.DisplayFor(md => item.City.CityName)</td>
+            <td>@Html.ActionLink("Delete","Delete",new {id = item.CompanyId })</td>
+            <td>@Html.ActionLink("Edit","Edit",new {id= item.CompanyId })</td>
+
+        </tr>
+
+        }
+    </table>
+</div>

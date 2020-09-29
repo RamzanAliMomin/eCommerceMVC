@@ -1,0 +1,133 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="bundleconfig.json" />
+    <Content Remove="package.json" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
+    <PackageReference Include="Fingers10.ExcelExport" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\ApplicationCore\ApplicationCore.csproj" />
+    <ProjectReference Include="..\DomainModels\DomainModels.csproj" />
+    <ProjectReference Include="..\Repository\Repository.csproj" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Include="bundleconfig.json" />
+    <None Include="Client\.git\COMMIT_EDITMSG" />
+    <None Include="Client\.git\config" />
+    <None Include="Client\.git\description" />
+    <None Include="Client\.git\HEAD" />
+    <None Include="Client\.git\hooks\applypatch-msg.sample" />
+    <None Include="Client\.git\hooks\commit-msg.sample" />
+    <None Include="Client\.git\hooks\fsmonitor-watchman.sample" />
+    <None Include="Client\.git\hooks\post-update.sample" />
+    <None Include="Client\.git\hooks\pre-applypatch.sample" />
+    <None Include="Client\.git\hooks\pre-commit.sample" />
+    <None Include="Client\.git\hooks\pre-merge-commit.sample" />
+    <None Include="Client\.git\hooks\pre-push.sample" />
+    <None Include="Client\.git\hooks\pre-rebase.sample" />
+    <None Include="Client\.git\hooks\pre-receive.sample" />
+    <None Include="Client\.git\hooks\prepare-commit-msg.sample" />
+    <None Include="Client\.git\hooks\update.sample" />
+    <None Include="Client\.git\index" />
+    <None Include="Client\.git\info\exclude" />
+    <None Include="Client\.git\logs\HEAD" />
+    <None Include="Client\.git\logs\refs\heads\master" />
+    <None Include="Client\.git\objects\06\c734263e1716e120bbb2771845eca1ae74c055" />
+    <None Include="Client\.git\objects\0e\0b2d78b5b6a26bd18fd658c2346237e94c642c" />
+    <None Include="Client\.git\objects\0e\77f11427dcd122f92ba9fa424390dfb0c3300b" />
+    <None Include="Client\.git\objects\16\317897b1c50a3a71bc775a8d6429f2b4c6cf98" />
+    <None Include="Client\.git\objects\2c\3ba2995c8510c02ca812f90280146738f162cf" />
+    <None Include="Client\.git\objects\30\956ae7ea265edf9bdc17001d75457e51ebe107" />
+    <None Include="Client\.git\objects\36\12073bc31cd4c1f5d6cbb00318521e9a61bd8a" />
+    <None Include="Client\.git\objects\39\b800f789619f0fb8063aba2e05bd5a57850e57" />
+    <None Include="Client\.git\objects\52\cac6e34b07df3efad9a4aa8ab09b3dfeebcf79" />
+    <None Include="Client\.git\objects\52\eade6dd8823807053b98c72ddd637d7949840e" />
+    <None Include="Client\.git\objects\56\5a11a2156b8307120e25ba35a89bf17a094f26" />
+    <None Include="Client\.git\objects\64\00fde7d544029c82e13d368a6b69d6664fe857" />
+    <None Include="Client\.git\objects\73\e4e6806cd6b451dc89181ce574c386c6c837da" />
+    <None Include="Client\.git\objects\7b\4f817adb754769ca126a939d48ac4b0850489d" />
+    <None Include="Client\.git\objects\7f\eacadc636ddabaee087a1457fb3cbeb8222e55" />
+    <None Include="Client\.git\objects\80\848532e47d58cc7a4b618f600b438960f9f045" />
+    <None Include="Client\.git\objects\86\d943a9b2e8f3bb69fbe37fd8363962646b1d92" />
+    <None Include="Client\.git\objects\87\b55ea720defd11fc5e253787bee5f3bbd56faf" />
+    <None Include="Client\.git\objects\90\d4ee0072ce3fc41812f8af910219f9eea3c3de" />
+    <None Include="Client\.git\objects\96\751e383f4c5fa4f37611353ff6d6c66f1340a1" />
+    <None Include="Client\.git\objects\99\7406ad22c29aae95893fb3d666c30258a09537" />
+    <None Include="Client\.git\objects\9b\03303546bce38de4b9135f63f6cf4e3f82cc68" />
+    <None Include="Client\.git\objects\9f\c1dc93d84ca1a0716ca730d25e9865e98b4f37" />
+    <None Include="Client\.git\objects\a4\28ce4802f00d410922be2b12a70a058b725f54" />
+    <None Include="Client\.git\objects\a9\eaedc7492aa5ab5ed5a5825e1134bb797b8a00" />
+    <None Include="Client\.git\objects\aa\665d6b8740860e1d67de37a26ab362ef8ba974" />
+    <None Include="Client\.git\objects\b1\018e74aee07da058d4b3b10fc6252bd00a7c25" />
+    <None Include="Client\.git\objects\b8\498c26f24ea7661ad43fda1a000c7b2cef29e3" />
+    <None Include="Client\.git\objects\c7\b673cf44b388e9989fe908b78d7d73cd2e1409" />
+    <None Include="Client\.git\objects\c8\d70f15200546102f7f9f7192ec8290d9bb6d0a" />
+    <None Include="Client\.git\objects\ce\5655a91f032b71193c275fcd925bea2c5892c6" />
+    <None Include="Client\.git\objects\cf\09ad2d9d5188d9b3a57f35a2937909a658638c" />
+    <None Include="Client\.git\objects\d5\64d0bc3dd917926892c55e3706cc116d5b165e" />
+    <None Include="Client\.git\objects\d9\e669deb01e9781327ea7ebcec9d107459a06b6" />
+    <None Include="Client\.git\objects\e6\9de29bb2d1d6434b8b29ae775ad8c2e48c5391" />
+    <None Include="Client\.git\objects\e8\9330a618c137cdaccde46f87923736cc04dfb4" />
+    <None Include="Client\.git\objects\f4\b732e8bcd623e10299162aa32d712989377476" />
+    <None Include="Client\.git\refs\heads\master" />
+    <None Include="package.json" />
+    <None Include="wwwroot\js\site.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+    <None Include="wwwroot\lib\bootstrap\LICENSE" />
+    <None Include="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <None Include="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\additional-methods.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\additional-methods.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\jquery.validate.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\LICENSE.md" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.js" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.min.js" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.min.map" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="Client\.git\objects\info\" />
+    <Folder Include="Client\.git\objects\pack\" />
+    <Folder Include="Client\.git\refs\tags\" />
+  </ItemGroup>
+
+</Project>

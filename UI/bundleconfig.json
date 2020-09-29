@@ -1,0 +1,68 @@
+﻿[
+  {
+    "outputFileName": "wwwroot/theme/dist/css/alt/adminlte.components.min.css",
+    "inputFiles": [
+      "wwwroot/theme/dist/css/alt/adminlte.components.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/theme/dist/css/alt/adminlte.core.min.css",
+    "inputFiles": [
+      "wwwroot/theme/dist/css/alt/adminlte.core.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/theme/dist/css/alt/adminlte.extra-components.min.css",
+    "inputFiles": [
+      "wwwroot/theme/dist/css/alt/adminlte.extra-components.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/theme/dist/css/alt/adminlte.pages.min.css",
+    "inputFiles": [
+      "wwwroot/theme/dist/css/alt/adminlte.pages.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/theme/dist/css/alt/adminlte.plugins.min.css",
+    "inputFiles": [
+      "wwwroot/theme/dist/css/alt/adminlte.plugins.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/theme/dist/css/adminlte.min.css",
+    "inputFiles": [
+      "wwwroot/theme/dist/css/adminlte.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/theme/dist/js/pages/dashboard.min.js",
+    "inputFiles": [
+      "wwwroot/theme/dist/js/pages/dashboard.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/theme/dist/js/pages/dashboard2.min.js",
+    "inputFiles": [
+      "wwwroot/theme/dist/js/pages/dashboard2.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/theme/dist/js/pages/dashboard3.min.js",
+    "inputFiles": [
+      "wwwroot/theme/dist/js/pages/dashboard3.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/theme/dist/js/adminlte.min.js",
+    "inputFiles": [
+      "wwwroot/theme/dist/js/adminlte.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/theme/dist/js/demo.min.js",
+    "inputFiles": [
+      "wwwroot/theme/dist/js/demo.js"
+    ]
+  }
+]

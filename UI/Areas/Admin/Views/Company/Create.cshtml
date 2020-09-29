@@ -1,0 +1,182 @@
+﻿@model DomainModels.Models.CompanyModel;
+
+@{
+    ViewData["Title"] = "Create";
+}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>
+        Company Information
+    </title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#CountryId').change(function () {
+                var url = "https://localhost:44369/Admin/Company/GetState/";
+                console.log(url);
+                var a = $(this).val();
+                console.log(a)
+                var ddlsource = $(this).val();
+                $.getJSON(url, { cid: ddlsource }, function (data) {
+                    var items = '';
+                    $("#StateId").empty();
+                    $.each(data, function (i, state) {
+                        items += "<option value='" + state.value + "'>" + state.text + "</option>";
+                    });
+                    $('#StateId').html(items);
+                });
+            });
+
+            $('#StateId').change(function () {
+                var url = "https://localhost:44369/Admin/Company/GetCity/";
+                console.log(url);
+                var a = $(this).val();
+                console.log(a)
+                var ddlsource = $(this).val();
+                $.getJSON(url, { sid: ddlsource }, function (data) {
+                    console.log(data)
+
+                    var items = '';
+                    $('#CityId').empty();
+                    $.each(data, function (i, city) {
+                        items += "<option value='" + city.value + "'>" + city.text + "</option>";
+                    });
+                    $('#CityId').html(items);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h4>Company Create</h4>
+
+    <hr />
+
+    <div class="container">
+        <form asp-action="Create">
+            <div class="row">
+                <div class="col-sm">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <input asp-for="CompanyName" class="form-control" placeholder="Enter the Company Name" />
+                        <span asp-validation-for="CompanyName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <input asp-for="MobileNumber" class="form-control" placeholder="Enter the Mobile Number" />
+                        <span asp-validation-for="MobileNumber" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <input asp-for="DirectorName" class="form-control" placeholder="Enter the Director Name" />
+                        <span asp-validation-for="DirectorName" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <input asp-for="TypeOfCompany" class="form-control" placeholder="Enter the Type Of Company" />
+                        <span asp-validation-for="TypeOfCompany" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <input asp-for="CompanyStartDate" class="form-control" placeholder="Selcet the Start Date" />
+                        <span asp-validation-for="CompanyStartDate" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <input asp-for="Level" class="form-control" placeholder="Enter the level" />
+                        <span asp-validation-for="Level" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <input asp-for="TownName" placeholder="Enter the Town Name" class="form-control" />
+                        <span asp-validation-for="TownName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <input placeholder="select Date" asp-for="CompanyLicenceDate" class="form-control" />
+                        <span asp-validation-for="CompanyLicenceDate" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <input placeholder=" Enter the Email Address" asp-for="EmailAddress" class="form-control" />
+                        <span asp-validation-for="EmailAddress" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <input placeholder="Enter the G R .No" asp-for="GrnNo" class="form-control" />
+                        <span asp-validation-for="GrnNo" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <input asp-for="Address" placeholder="Enter the Address" class="form-control" />
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <select asp-for="CountryId" class="form-control" asp-items="@(new SelectList(@ViewBag.CountryList,"CountryId", "CountryName"))">
+                            <option>Select Country</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <select class="form-control" id="StateId" name="StateId" asp-items="@(new SelectList(string.Empty,"StateId","StateName"))">
+                            <option>Select State</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <select class="form-control" id="CityId" name="CityId" asp-items="@(new SelectList(string.Empty,"CityId","CityName"))">
+                            <option>Select City</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <input asp-for="PinCode" placeholder="Enter the correct PIN" class="form-control" />
+                        <span asp-validation-for="PinCode" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                        <input type="reset" value="Reset" class="btn btn-danger" />
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </form>
+
+    </div>
+
+
+</body>
+</html>
